@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devbuntu Repository</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Devbuntu</h1>
+            <p class="tagline">Development packages for Ubuntu</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Getting Started</h2>
+            <p>Add the Devbuntu repository to your system to install development packages.</p>
+        </section>
+
+        <section class="instructions">
+            <h2>Installation</h2>
+            
+            <div class="step">
+                <h3>1. Import the GPG Key</h3>
+                <pre><code>curl -fsSL https://goldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg</code></pre>
+            </div>
+
+            <div class="step">
+                <h3>2. Add the Repository</h3>
+                <pre><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/devbuntu-archive-keyring.gpg] https://goldfang.github.io/devbuntu-web stable main" | sudo tee /etc/apt/sources.list.d/devbuntu.list > /dev/null</code></pre>
+            </div>
+
+            <div class="step">
+                <h3>3. Update Package List</h3>
+                <pre><code>sudo apt update</code></pre>
+            </div>
+
+            <div class="step">
+                <h3>4. Install Packages</h3>
+                <pre><code>sudo apt install &lt;package-name&gt;</code></pre>
+            </div>
+        </section>
+
+        <section class="packages">
+            <h2>Available Packages</h2>
+            <p>Package listing coming soon.</p>
+        </section>
+
+        <section class="uninstall">
+            <h2>Uninstallation</h2>
+            <pre><code>sudo rm /etc/apt/sources.list.d/devbuntu.list
+sudo rm /usr/share/keyrings/devbuntu-archive-keyring.gpg
+sudo apt update</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Devbuntu Repository</p>
+        </div>
+    </footer>
+</body>
+</html>
