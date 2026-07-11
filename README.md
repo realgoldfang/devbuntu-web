@@ -6,10 +6,10 @@ Development packages for Ubuntu systems.
 
 ```bash
 # Import GPG key
-curl -fsSL https://goldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg
+curl -fsSL https://realgoldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg
 
 # Add repository
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/devbuntu-archive-keyring.gpg] https://goldfang.github.io/devbuntu-web stable main" | sudo tee /etc/apt/sources.list.d/devbuntu.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/devbuntu-archive-keyring.gpg] https://realgoldfang.github.io/devbuntu-web stable main" | sudo tee /etc/apt/sources.list.d/devbuntu.list > /dev/null
 
 # Update and install
 sudo apt update
@@ -18,7 +18,7 @@ sudo apt install <package-name>
 
 ## Website
 
-The repository website is hosted at: https://goldfang.github.io/devbuntu-web/
+The repository website is hosted at: https://realgoldfang.github.io/devbuntu-web/
 
 ## Adding Packages
 

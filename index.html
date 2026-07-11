@@ -25,12 +25,12 @@
             
             <div class="step">
                 <h3>1. Import the GPG Key</h3>
-                <pre><code>curl -fsSL https://goldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg</code></pre>
+                <pre><code>curl -fsSL https://realgoldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg</code></pre>
             </div>
 
             <div class="step">
                 <h3>2. Add the Repository</h3>
-                <pre><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/devbuntu-archive-keyring.gpg] https://goldfang.github.io/devbuntu-web stable main" | sudo tee /etc/apt/sources.list.d/devbuntu.list > /dev/null</code></pre>
+                <pre><code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/devbuntu-archive-keyring.gpg] https://realgoldfang.github.io/devbuntu-web stable main" | sudo tee /etc/apt/sources.list.d/devbuntu.list > /dev/null</code></pre>
             </div>
 
             <div class="step">
