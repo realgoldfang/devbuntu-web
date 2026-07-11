@@ -17,12 +17,17 @@
     <main class="container">
         <section class="intro">
             <h2>Getting Started</h2>
-            <p>Add the Devbuntu repository to your system to install development packages.</p>
+            <p>Add the Devbuntu repository to your system to install development packages. Packages not found here will automatically fall back to Ubuntu's official repositories.</p>
+        </section>
+
+        <section class="note">
+            <h2>How It Works</h2>
+            <p>Devbuntu is a supplementary repository. APT searches all configured sources when installing packages — if a package exists in both Devbuntu and Ubuntu repos, Devbuntu's version takes priority.</p>
         </section>
 
         <section class="instructions">
             <h2>Installation</h2>
-            
+
             <div class="step">
                 <h3>1. Import the GPG Key</h3>
                 <pre><code>curl -fsSL https://realgoldfang.github.io/devbuntu-web/gpg-key.asc | sudo gpg --dearmor -o /usr/share/keyrings/devbuntu-archive-keyring.gpg</code></pre>
@@ -46,7 +51,9 @@
 
         <section class="packages">
             <h2>Available Packages</h2>
-            <p>Package listing coming soon.</p>
+            <div id="package-list">
+                <p class="loading">Loading packages...</p>
+            </div>
         </section>
 
         <section class="uninstall">
@@ -62,5 +69,7 @@ sudo apt update</code></pre>
             <p>&copy; 2026 Devbuntu Repository</p>
         </div>
     </footer>
+
+    <script src="packages.js"></script>
 </body>
 </html>
